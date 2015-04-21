@@ -116,18 +116,18 @@ $(function() {
          */
         var feedTexts = $('.feed').find('h2').text();
 
-          beforeEach(function(done){
+        beforeEach(function(done) {
             feedTexts;
             loadFeed(1, done);
-         });
+        });
 
-         it('ensures that a new feed is loaded', function(done){
+        it('ensures that a new feed is loaded', function(done) {
             expect($('.feed').find('h2').text()).not.toBe(feedTexts);
             done();
-         });
+        });
 
-         afterEach(function(done){
+        afterEach(function(done) {
             loadFeed(0, done);
-         });
+        });
     });
 }());
